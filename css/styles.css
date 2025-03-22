@@ -361,8 +361,9 @@
 
     /* Map */
     #map {
-        margin: 2em auto;
-        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
     }
 
     /* Details container */
@@ -522,4 +523,292 @@ footer p {
 .social-media a:hover {
     transform: scale(1.2);
     color: #fff;
+}
+
+/* Tablets na posição vertical (451px - 1024px) */
+
+@media (min-width: 451px) and (max-width: 1024px) {
+    /* Event form */
+    #event-subscription {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #disclaimer {
+        padding: 2em;
+    }
+
+    #disclaimer h2 {
+        margin-bottom: 0.5em;
+    }
+
+    #subscription-form {
+        max-width: 70%;
+        margin-bottom: 2em;
+    }
+
+    /* Benefits section */
+    .benefits {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 2em;
+    }
+
+    .benefit {
+        max-width: 100%;
+        margin-bottom: 2em;
+    }
+
+    /* Location */
+    #location {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 2em 0;
+    }
+
+    #address {
+        order: 2;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    #address i {
+        margin: 0.3em 0;
+    }
+
+    #about-location {
+        order: 1;
+        max-width: 100%;
+    }
+
+    #about-location h3 {
+        margin-bottom: 0;
+    }
+
+    #about-location p {
+        display: none;
+    }
+
+    /* Map */
+    #map {
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+    }
+
+    /* Details container */
+    .detail {
+        flex-direction: column;
+        margin-bottom: 0.5em;
+        gap: 0;
+    }
+
+    .detail img {
+        width: 100%;
+        margin: 2em 0;
+    }
+
+    #detail-1 img {
+        display: none;
+    }
+
+    .detail-description {
+        padding: 0;
+    }
+
+    #detail-3 img {
+        order: 2;
+    }
+
+    #detail-3 .detail-description {
+        order: 1;
+    }
+
+    /* Call to Action Section */
+    #cta .btn {
+        width: 80%;
+    }
+}
+
+/* Ajuste para exibir o mapa abaixo do endereço em tablets */
+
+@media (min-width: 451px) and (max-width: 1024px) {
+    #location {
+        display: flex;
+        flex-direction: column;
+        /text-align: center;
+        padding: 2em;
+        gap: 2em;
+    }
+
+    #about-location {
+        order: 1;
+    }
+
+    #address {
+        order: 2;
+        flex-direction: column;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #map {
+        order: 3;
+        margin-top: 1em;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Ajuste para exibir o mapa abaixo do endereço em celulares */
+
+@media (max-width: 450px) {
+    #location {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2em;
+        gap: 2em;
+    }
+
+    #about-location {
+        order: 1;
+    }
+
+    #address {
+        order: 2;
+        flex-direction: column;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #map {
+        order: 3;
+        margin-top: 1em;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Smartwatch (telas entre 120px e 300px) */
+@media (max-width: 300px) {
+    body {
+        font-size: 0.6em;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ajuste geral para layout */
+    #event-subscription,
+    #location,
+    .benefits,
+    .detail {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    /* Simplificação do formulário */
+    #subscription-form {
+        display: none;
+    }
+
+    /* Benefícios (apenas títulos) */
+    .benefit {
+        display: none;
+    }
+
+    /* Localização */
+    #location {
+        padding: 1em 0;
+    }
+
+    #address {
+        text-align: center;
+        font-size: 0.8em;
+        margin: 1em 0;
+    }
+
+    #address i {
+        font-size: 2em;
+    }
+
+    #map {
+        display: none; /* Oculta o mapa para simplificar */
+    }
+
+    /* Seções de detalhes */
+    .detail img,
+    .detail-description,
+    #about-location p {
+        display: none;
+    }
+
+    /* Call to Action */
+    #cta h3 {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    #cta .btn {
+        width: 100%;
+        padding: 0.3em;
+        font-size: 0.7em;
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 0.7em;
+    }
+}
+
+/* Smart TVs (telas grandes, 1920px ou mais) */
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
+    }
+
+    #event-subscription,
+    .benefits,
+    #location,
+    #details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2em;
+    }
+
+    #subscription-form,
+    .benefit,
+    .detail {
+        max-width: 30%;
+    }
+
+    #map {
+        height: 500px;
+        width: 80%;
+        margin: 1em auto;
+    }
+
+    .detail img {
+        width: 60%;
+    }
+
+    #cta .btn {
+        width: 40%;
+        padding: 1em;
+        font-size: 1.2em;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
 }
